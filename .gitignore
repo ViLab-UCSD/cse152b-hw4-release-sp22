@@ -1,0 +1,6 @@
+Segmentation/checkpoints/unet_**
+unet_checkpoints/
+Segmentation/runs/checkpoints/unet_*
+.ipynb_checkpoints/
+Detection/weights/
+hw4.pdf
