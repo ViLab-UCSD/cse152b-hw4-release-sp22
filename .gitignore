@@ -3,6 +3,5 @@ unet_checkpoints/
 Segmentation/runs/checkpoints/unet_*
 .ipynb_checkpoints/
 Detection/weights/
-Detection/results/
 hw4.pdf
 *.pyc
