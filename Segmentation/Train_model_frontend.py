@@ -374,9 +374,9 @@ class Train_model_frontend(object):
 def main():
     parser = argparse.ArgumentParser()
     # The locationi of training set
-    parser.add_argument('--imageRoot', default='/data/datasets/cs152b-sp22-a00-public/VOCdevkitVOC2012/JPEGImages', help='path to input images' )
-    parser.add_argument('--labelRoot', default='/data/datasets/cs152b-sp22-a00-public/VOCdevkitVOC2012/SegmentationClass', help='path to input images' )
-    parser.add_argument('--fileList', default='/data/datasets/cs152b-sp22-a00-public/VOCdevkitVOC2012/ImageSets/Segmentation/val.txt', help='path to input images' )
+    parser.add_argument('--imageRoot', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/JPEGImages', help='path to input images' )
+    parser.add_argument('--labelRoot', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/SegmentationClass', help='path to input images' )
+    parser.add_argument('--fileList', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt', help='path to input images' )
     parser.add_argument('--colormap', default='colormap.mat', help='colormap for visualization')
 
     parser.add_argument('--experiment', default='checkpoint', help='the path to store sampled images and models')

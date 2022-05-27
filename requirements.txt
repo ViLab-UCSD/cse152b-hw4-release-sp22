@@ -1,6 +1,6 @@
 numpy
-torch
-torchvision
+# torch
+# torchvision
 argparse
 scipy
 opencv-python

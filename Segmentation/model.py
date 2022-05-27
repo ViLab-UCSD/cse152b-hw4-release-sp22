@@ -68,6 +68,8 @@ class encoder(nn.Module ):
         x3 = self.b2_2(self.b2_1(x2 ) )
         x4 = self.b3_2(self.b3_1(x3 ) )
         x5 = self.b4_2(self.b4_1(x4 ) )
+        # import ipdb; ipdb.set_trace()
+        # print(x1.shape, .,...)
         return x1, x2, x3, x4, x5
 
 

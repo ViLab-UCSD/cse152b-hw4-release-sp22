@@ -24,7 +24,7 @@ def main():
     parser.add_argument('--imageRoot', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/JPEGImages', help='path to input images' )
     parser.add_argument('--labelRoot', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/SegmentationClass', help='path to input images' )
     parser.add_argument('--fileList', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/ImageSets/Segmentation/train.txt', help='list of training images' )
-    # parser.add_argument('--fileListVal', default='/data/datasets/cs152b-sp22-a00-public/VOCdevkitVOC2012/ImageSets/Segmentation/trainval.txt', help='list of validation images' )
+    # parser.add_argument('--fileListVal', default='/data/datasets/cs152b-sp22-a00-public/VOCdevkit/VOC2012/ImageSets/Segmentation/trainval.txt', help='list of validation images' )
     parser.add_argument('--fileListTest', default='/datasets/cs152b-sp22-a00-public/hw4_data/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt', help='list of validation images' )
     parser.add_argument('--colormap', default='colormap.mat', help='colormap for visualization')
 

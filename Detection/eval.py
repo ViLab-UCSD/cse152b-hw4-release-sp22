@@ -71,7 +71,7 @@ imgpath = os.path.join(args.voc_root, 'VOC2012', 'JPEGImages', '%s.jpg')
 imgsetpath = os.path.join(args.voc_root, 'VOC2012', 'ImageSets',
                           'Main', '{:s}.txt')
 YEAR = '2012'
-devkit_path = args.voc_root + 'VOC' + YEAR
+devkit_path = os.path.join(args.voc_root, 'VOC' + YEAR)
 dataset_mean = (104, 117, 123)
 set_type = 'val'
 

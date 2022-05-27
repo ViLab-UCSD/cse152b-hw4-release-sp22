@@ -24,6 +24,7 @@ class BatchLoader(Dataset ):
 
         self.count = len(self.imgNames )
         self.perm = list(range(self.count ) )
+        random.seed(0)
         random.shuffle(self.perm )
         print('Image Num: %d' % self.count )
 
@@ -74,6 +75,7 @@ class BatchLoader(Dataset ):
 
         batchDict = {
                 'im' : im,
+                'labelName': labelName, 
                 'label': label,
                 'labelIndex': labelIndex,
                 'mask': mask

@@ -1,4 +1,5 @@
 import torch
+torch.manual_seed(0)
 from torch.autograd import Variable
 import torch.functional as F
 import dataLoader
@@ -104,6 +105,8 @@ for i, dataBatch in enumerate(segLoader ):
     iteration += 1
 
     # Read data
+    label_name = dataBatch['labelName']
+    print([_.split('/')[-1] for _ in label_name])
     with torch.no_grad():
         image_cpu = dataBatch['im']
         imBatch.resize_(image_cpu.size() )
