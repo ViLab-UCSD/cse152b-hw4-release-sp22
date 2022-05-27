@@ -24,7 +24,7 @@ class BatchLoader(Dataset ):
 
         self.count = len(self.imgNames )
         self.perm = list(range(self.count ) )
-        random.seed(0)
+        # random.seed(0)
         random.shuffle(self.perm )
         print('Image Num: %d' % self.count )
 
