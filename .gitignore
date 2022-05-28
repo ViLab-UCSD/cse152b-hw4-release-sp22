@@ -5,3 +5,5 @@ Segmentation/runs/checkpoints/unet_*
 Detection/weights/
 hw4.pdf
 *.pyc
+Detection/results/*.txt
+Detection/results/val/*.pkl
