@@ -379,7 +379,10 @@ def test_net(save_folder, net, cuda, dataset, transform, top_k,
     output_dir = get_output_dir('results', set_type)
     det_file = os.path.join(output_dir, 'detections.pkl')
 
-    for i in range(num_images)[:100]:
+    # import ipdb; ipdb.set_trace()
+
+    # for i in range(num_images)[:100]:
+    for i in range(num_images):
         im, gt, h, w = dataset.pull_item(i)
 
         x = Variable(im.unsqueeze(0))
