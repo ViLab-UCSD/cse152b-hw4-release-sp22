@@ -7,12 +7,14 @@ from PIL import Image
 import cv2
 
 class BatchLoader(Dataset ):
-    def __init__(self, imageRoot, labelRoot, fileList, imWidth = None, imHeight = None, numClasses=21):
+    def __init__(self, imageRoot, labelRoot, fileList, imWidth = None, imHeight = None, numClasses=21, if_crop=True):
         super(BatchLoader, self).__init__()
 
         self.imageRoot = imageRoot
         self.labelRoot = labelRoot
         self.fileList = fileList
+
+        self.if_crop = if_crop
 
         with open(fileList, 'r') as fIn:
             imgNames = fIn.readlines()
@@ -91,7 +93,7 @@ class BatchLoader(Dataset ):
         im = np.asarray(im )
 
         nrows, ncols = im.shape[0], im.shape[1]
-        if not (self.imHeight is None or self.imWidth is None ):
+        if self.if_crop and not (self.imHeight is None or self.imWidth is None ):
             if nrows < self.imHeight or ncols < self.imWidth:
                 scaleRow = float(nrows ) / float(self.imHeight )
                 scaleCol = float(ncols ) / float(self.imWidth )

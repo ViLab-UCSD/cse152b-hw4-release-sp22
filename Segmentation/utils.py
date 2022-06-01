@@ -17,9 +17,11 @@ def computeAccuracy( pred, labelIndexBatch, maskBatch, numClasses = 21 ):
     pred = pred.cpu().data.numpy()
     assert( pred.shape[1] == numClasses )
     pred = pred.argmin(axis = 1 )
+    # print(pred.shape, np.unique(pred))
 
     gt = labelIndexBatch.cpu().data.numpy()
     gt = gt.squeeze(1)
+    # print(gt.shape, np.unique(gt))
     mask = maskBatch.cpu().data.numpy()
     mask = mask.squeeze(1)
 
@@ -29,7 +31,8 @@ def computeAccuracy( pred, labelIndexBatch, maskBatch, numClasses = 21 ):
     sumim = gt * numClasses + pred
     sumim = sumim[mask != 0].squeeze()
 
-    histIm, _ = np.histogram(sumim, np.arange(numClasses * numClasses ) )
+    histIm, _ = np.histogram(sumim, np.arange(numClasses * numClasses+1) )
+    # print(sumim.shape, np.amax(sumim), np.amin(sumim), histIm.shape)
     hist[0:len(histIm ) ] += histIm
 
     return hist.reshape(numClasses, numClasses )
