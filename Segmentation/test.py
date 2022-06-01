@@ -159,3 +159,5 @@ for i, dataBatch in enumerate(segLoader ):
 
 testingLog.close()
 np.save('%s/accuracy_%d.npy' % (opt.experiment, opt.epochId), accuracy )
+
+print(accuracy)
