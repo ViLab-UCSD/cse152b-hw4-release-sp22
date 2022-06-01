@@ -59,6 +59,7 @@ class BatchLoader(Dataset ):
             nrows, ncols = im.shape[1], im.shape[2]
             gapH = (nrows - self.imHeight )
             gapW = (ncols - self.imWidth )
+            # np.random.seed(0)
             rs = int(np.round(np.random.random() * gapH ) )
             cs = int(np.round(np.random.random() * gapW ) )
 

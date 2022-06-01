@@ -153,7 +153,7 @@ for i, dataBatch in enumerate(segLoader ):
             % ( epoch, iteration, meanAccuracy ) )
 
     if iteration % 50 == 0:
-        vutils.save_image( imBatch.data , '%s/images_%d.png' % (opt.experiment, iteration ), padding=0, normalize = True)
+        vutils.save_image(imBatch.data , '%s/images_%d.png' % (opt.experiment, iteration ), padding=0, normalize = True)
         utils.save_label(labelBatch.data, maskBatch.data, colormap, '%s/labelGt_%d.png' % (opt.experiment, iteration ), nrows=1, ncols=1 )
         utils.save_label(-pred.data, maskBatch.data, colormap, '%s/labelPred_%d.png' % (opt.experiment, iteration ), nrows=1, ncols=1 )
 
